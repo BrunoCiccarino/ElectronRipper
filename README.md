@@ -1,6 +1,5 @@
 # ElectronRipper
 
-
 <!-- Python logo -->
 <a href="https://www.python.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
 
@@ -8,8 +7,7 @@
 
 ## Forked 09/06/2024
 
-I will continue to bring updates whenever possible, the original repository has been archived and no longer works, to help just send a pull request that I will review and accept, don't forget to leave a star on the repository if you liked it.
-
+This repository is a fork of the repository: <a href="https://github.com/rarecoil/unwebpack-sourcemap">UnwebpackSourcemap</a> and I will continue to bring updates and improvements over time. I will create a guide on how you, the user, can help me bring new updates and improvements. Thank you for using this tool.
 
 ### Recover uncompiled TypeScript sources, JSX, and more from Webpack sourcemaps.
 
@@ -28,22 +26,22 @@ The script requires Python3, `BeautifulSoup4` and `requests`. Install dependenci
 \$ mkdir output
 ```
 
-In order of increasing noisiness, to unpack a local sourcemap:
+In order of increasing noisiness, to unpack a local sourcemap, remembering that you have to pass the absolute paths for the script to work.:
 
 ```
-\$ ./unwebpack_sourcemap.py --local /path/to/source.map output
+\$ python main.py --local 'C:\Users\Usuario\OneDrive\Documentos\ElectronRipper\Luna\resources\unpackedcopy\build\static\js\main.af54de98.js.map' -o 'C:\Users\Usuario\OneDrive\Documentos\ElectronRipper\test\resources\unpackedcopy\luna'
 ```
 
 To unpack a remote sourcemap:
 
 ```
-\$ ./unwebpack_sourcemap.py https://pathto.example.com/source.map output
+\$ ./main.py https://pathto.example.com/source.map output
 ```
 
 To attempt to read all `<script src>` on an HTML page, fetch JS assets, look for `sourceMappingURI`, and pull sourcemaps from remote sources:
 
 ```
-\$ ./unwebpack_sourcemap.py --detect https://pathto.example.com/spa_root/ output
+\$ ./main.py --detect https://pathto.example.com/spa_root/ output
 ```
 
 ## I'm a developer and this scares me. What do?
